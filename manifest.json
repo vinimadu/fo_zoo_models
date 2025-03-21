@@ -1,0 +1,32 @@
+{
+    "name": "Traffic Sign Detection Models",
+    "url": "https://github.com/vinimadu/fo_zoo_models",
+    "models": [
+        {
+            "base_name": "faster-rcnn-gtsdb-single-class",
+            "base_filename": "/home/madu/fiftyone/__models__/fasterrcnn.pth",
+            "description": "CLIP text/image encoder from Learning Transferable Visual Models From Natural Language Supervision (https://arxiv.org/abs/2103.00020) trained on 400M text-image pairs",
+            "tags": [
+                "detection",
+                "torch"
+            ],
+            "manager": {
+                "type": "fiftyone.core.models.ModelManager",
+                "config": {
+                    "google_drive_id": "1xRDxfN5nIMjxtAUQWzqDiPIk2Y9bFKgX"
+                }
+            },
+            "size_bytes": 165740544,
+            "date_added": "2022-04-12 17:49:51",
+            "requirements": {
+                "packages": ["torch", "torchvision"],
+                "cpu": {
+                    "support": true
+                },
+                "gpu": {
+                    "support": true
+                }
+            }
+        }
+    ]
+}
