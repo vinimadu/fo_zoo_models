@@ -1,9 +1,10 @@
 import torch
+import fiftyone.utils.torch as fout
 
 def download_model(model_name, model_path):
         pass
 
-def load_model(model_name, model_path, **kwargs):
+def load_model(model_name, model_path, classes, **kwargs):
     """Loads the model.
 
     Args:
@@ -25,4 +26,8 @@ def load_model(model_name, model_path, **kwargs):
     # other modules in `model_dir`
     model = torch.load(model_path,weights_only=False)
 
-    return model
+    d = dict(model_path=model_path, classes=classes)
+
+    config = fout.TorchImageModelConfig(d)
+
+    return fout.TorchImageModel(config)
