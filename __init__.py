@@ -1,8 +1,20 @@
+import logging
+import eta.core.web as etaw
+from fiftyone.operators import types
+
 import torch
 import fiftyone.utils.torch as fout
 
+logger = logging.getLogger(__name__)
+
+MODEL_URL = "https://drive.usercontent.google.com/download?id=1xRDxfN5nIMjxtAUQWzqDiPIk2Y9bFKgX&export=download&authuser=0&confirm=t&uuid=6f9b3aa6-42d8-4fc0-841d-280d7dcf4d9d&at=AEz70l4_GFVTcb1dFQcxlJGhJ2MH:1742683378839"
+
 def download_model(model_name, model_path):
-        pass
+    logger.info("Downloading model...")
+
+    etaw.download_file(MODEL_URL, path=model_path)
+
+    
 
 def load_model(model_name, model_path, classes, **kwargs):
     """Loads the model.

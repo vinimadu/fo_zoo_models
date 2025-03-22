@@ -10,12 +10,6 @@
                 "detection",
                 "torch"
             ],
-            "manager": {
-                "type": "fiftyone.core.models.ModelManager",
-                "config": {
-                    "google_drive_id": "1xRDxfN5nIMjxtAUQWzqDiPIk2Y9bFKgX"
-                }
-            },
             "size_bytes": 165740544,
             "date_added": "2022-04-12 17:49:51",
             "requirements": {
