@@ -1,11 +1,11 @@
 {
-    "name": "Faster RCNN",
+    "name": "Traffic Sign Detection Models",
     "url": "https://github.com/vinimadu/fo_zoo_models",
     "models": [
         {
             "base_name": "faster-rcnn-gtsdb-single-class",
-            "base_filename": "./models/Faster RCNN/fasterrcnn.pth",
-            "description": "Faster Rcnn trained on GTSDB",
+            "base_filename": "/home/madu/fiftyone/__models__/Traffic Sign Detection Models/fasterrcnn.pth",
+            "description": "Faster Rcnn trained on GTSDB with single class",
             "tags": [
                 "detection",
                 "torch"
