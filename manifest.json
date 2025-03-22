@@ -4,8 +4,8 @@
     "models": [
         {
             "base_name": "faster-rcnn-gtsdb-single-class",
-            "base_filename": "/home/madu/fiftyone/__models__/fasterrcnn.pth",
-            "description": "CLIP text/image encoder from Learning Transferable Visual Models From Natural Language Supervision (https://arxiv.org/abs/2103.00020) trained on 400M text-image pairs",
+            "base_filename": "/home/madu/fiftyone/__models__/Traffic Sign Detection Models/fasterrcnn.pth",
+            "description": "Faster Rcnn trained on GTSDB",
             "tags": [
                 "detection",
                 "torch"
