@@ -20,14 +20,16 @@ def load_model(model_name, model_path, classes, **kwargs):
         a :class:`fiftyone.core.models.Model`
     """
 
-    print(model_name)
+    # print(model_name)
 
-    # Consturct the specified `Model` instance, generally by importing
-    # other modules in `model_dir`
-    model = torch.load(model_path,weights_only=False)
+    # # Consturct the specified `Model` instance, generally by importing
+    # # other modules in `model_dir`
+    # model = torch.load(model_path,weights_only=False)
 
-    d = dict(model_path=model_path, classes=classes)
+    # d = dict(model_path=model_path, classes=classes)
 
-    config = fout.TorchImageModelConfig(d)
+    # config = fout.TorchImageModelConfig(d)
 
-    return fout.TorchImageModel(config)
+    # return fout.TorchImageModel(config)
+
+    pass
