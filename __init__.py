@@ -27,12 +27,23 @@ def load_model(model_name, model_path, classes, **kwargs):
 
     d = dict(model_path=model_path, classes=classes)
 
-    config = fout.TorchImageModelConfig(d)
+    config = MyFrcnnModelConfig(d)
+    print(config)
 
     return MyFrcnnModel(config)
 
+class MyFrcnnModelConfig(fout.TorchImageModelConfig):
+    def __init__(self, d):
+        super().__init__(d)
+
+        self.model_path = self.parse_string(d, "model_path")
+
+        self.entrypoint_fcn = "torchvision.models.detection.faster_rcnn.fasterrcnn_resnet50_fpn"
+        self.output_processor_cls = "fiftyone.utils.torch.DetectorOutputProcessor"
+
 class MyFrcnnModel(fout.TorchImageModel):
-    def __init__(self, config, model_path):
+    def __init__(self, config):
         super().__init__(config)
 
-    self._model = torch.load(config.model_path,weights_only=False)
+        self._model = torch.load(config.model_path,weights_only=False)
+
