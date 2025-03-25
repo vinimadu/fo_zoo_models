@@ -16,14 +16,6 @@
                     "google_drive_id": "1xRDxfN5nIMjxtAUQWzqDiPIk2Y9bFKgX"
                 }
             },
-            "default_deployment_config_dict": {
-                "type": "fiftyone.zoo.models.torch.TorchvisionImageModel",
-                "config": {
-                    "entrypoint_fcn": "torchvision.models.detection.faster_rcnn.fasterrcnn_resnet50_fpn",
-                    "output_processor_cls": "fiftyone.utils.torch.DetectorOutputProcessor",
-                    "confidence_thresh": 0.3
-                }
-            },
             "size_bytes": 165740544,
             
             "date_added": "2022-04-12 17:49:51",
