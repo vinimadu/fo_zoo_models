@@ -20,15 +20,12 @@ def load_model(model_name, model_path, classes, **kwargs):
         a :class:`fiftyone.core.models.Model`
     """
 
-    print(model_name)
-
     # Consturct the specified `Model` instance, generally by importing
     # other modules in `model_dir`
 
     d = dict(model_path=model_path, classes=classes)
 
     config = MyFrcnnModelConfig(d)
-    print(config)
 
     return MyFrcnnModel(config)
 
@@ -46,4 +43,3 @@ class MyFrcnnModel(fout.TorchImageModel):
         super().__init__(config)
 
         self._model = torch.load(config.model_path,weights_only=False)
-
